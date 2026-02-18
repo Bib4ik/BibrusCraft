@@ -1,0 +1,109 @@
+/* BANNER */
+.banner {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #050810 0%, #0a1628 40%, #071020 100%);
+}
+
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  background:
+          radial-gradient(ellipse 60% 80% at 70% 50%, rgba(0, 145, 196, 0.18) 0%, transparent 70%),
+          radial-gradient(ellipse 30% 60% at 20% 30%, rgba(224, 64, 251, 0.08) 0%, transparent 60%);
+}
+
+/* Hexagon grid pattern */
+.banner-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52' viewBox='0 0 60 52'%3E%3Cpolygon points='30,2 56,16 56,36 30,50 4,36 4,16' fill='none' stroke='rgba(0,200,248,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 60px 52px;
+  opacity: 0.8;
+}
+
+.banner-glow {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,200,248,0.4), transparent);
+  box-shadow: 0 0 20px rgba(0,200,248,0.2);
+}
+
+/* Scan line effect */
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+                  0deg,
+                  transparent,
+                  transparent 3px,
+                  rgba(0,0,0,0.08) 3px,
+                  rgba(0,0,0,0.08) 4px
+  );
+  pointer-events: none;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 0 32px;
+  gap: 12px;
+}
+
+.btn {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 22px;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  transition: all 0.2s;
+}
+
+.btn-login {
+  background: transparent;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  clip-path: none;
+  border-radius: 2px;
+  position: relative;
+}
+
+.btn-login::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 200, 248, 0.08);
+}
+
+.btn-login:hover {
+  background: rgba(0, 200, 248, 0.15);
+  box-shadow: 0 0 12px rgba(0, 200, 248, 0.3);
+}
+
+.btn-register {
+  background: linear-gradient(135deg, #00c8f8, #0091c4);
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 16px rgba(0, 200, 248, 0.35);
+}
+
+.btn-register:hover {
+  box-shadow: 0 0 24px rgba(0, 200, 248, 0.55);
+  background: linear-gradient(135deg, #20d8ff, #00a8e0);
+}
