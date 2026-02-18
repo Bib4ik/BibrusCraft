@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-dark: #0a0e1a;
+  --bg-nav: #0d1220;
+  --cyan: #00c8f8;
+  --cyan-dark: #0091c4;
+  --pink: #e040fb;
+  --text: #c8ddf0;
+  --border: rgba(0, 200, 248, 0.15);
+}
+
+body {
+  background: var(--bg-dark);
+  font-family: 'Exo 2', sans-serif;
+}
