@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80" # Сайт будет доступен по адресу localhost:8080
+    volumes:
+      - .:/var/www/html # Синхронизация файлов: меняешь код в Шторме — он меняется в контейнере
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: my_app
