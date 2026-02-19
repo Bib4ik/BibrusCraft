@@ -4,9 +4,9 @@ services:
   web:
     build: .
     ports:
-      - "8080:80" # Твой сайт: http://localhost:8080
+      - "8080:80" # site: http://localhost:8080
     volumes:
-      - .:/var/www/html #
+      - .:/var/www/html # app code
 
   db:
     image: mysql:8.0
@@ -15,9 +15,10 @@ services:
       MYSQL_ROOT_PASSWORD: root #
       MYSQL_DATABASE: my_app #
     ports:
-      - "3306:3306" # Пробрасываем порт, чтобы PhpStorm мог подключиться к БД
+      - "3306:3306" # expose for local tools
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Магия здесь
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # init schema/data
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -29,6 +30,9 @@ services:
       PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "8081:80" # Админка базы: http://localhost:8081
+      - "8081:80" # db admin: http://localhost:8081
     depends_on:
       - db
+
+volumes:
+  db_data:
