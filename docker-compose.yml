@@ -1,13 +1,34 @@
 version: '3.8'
+
 services:
   web:
     build: .
     ports:
-      - "8080:80" # Сайт будет доступен по адресу localhost:8080
+      - "8080:80" # Твой сайт: http://localhost:8080
     volumes:
-      - .:/var/www/html # Синхронизация файлов: меняешь код в Шторме — он меняется в контейнере
+      - .:/var/www/html #
+
   db:
     image: mysql:8.0
+    restart: always
     environment:
+      MYSQL_ROOT_PASSWORD: root #
+      MYSQL_DATABASE: my_app #
+    ports:
+      - "3306:3306" # Пробрасываем порт, чтобы PhpStorm мог подключиться к БД
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Магия здесь
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: bibruscraft-pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: my_app
+    ports:
+      - "8081:80" # Админка базы: http://localhost:8081
+    depends_on:
+      - db

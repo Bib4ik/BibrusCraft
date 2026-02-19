@@ -13,4 +13,7 @@
 body {
   background: var(--bg-dark);
   font-family: 'Exo 2', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
