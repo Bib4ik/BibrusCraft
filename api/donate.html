@@ -268,5 +268,57 @@
   </div>
 </div>
 
+<!-- MODAL -->
+<div class="don-modal-overlay" id="donModalOverlay">
+  <div class="don-modal">
+    <div class="don-modal__topline"></div>
+    <div class="don-modal__header">
+      <div>
+        <span class="don-modal__label">// Оформление покупки</span>
+        <div class="don-modal__title" id="donModalTitle">VIP</div>
+      </div>
+      <button class="don-modal__close" id="donModalClose">✕</button>
+    </div>
+
+    <div class="don-modal__body">
+      <!-- Выбор сервера -->
+      <div class="don-modal__field">
+        <label class="don-modal__field-label">Выберите сервер</label>
+        <div class="don-modal__options" id="donServerOptions">
+          <button class="don-option" data-value="industrial">Industrial</button>
+          <button class="don-option" data-value="pokeworld">PokeWorld</button>
+          <button class="don-option" data-value="terrafirmacreate">TerraFirmaCreate</button>
+          <button class="don-option" data-value="frozentech">FrozenTech</button>
+          <button class="don-option" data-value="hitech1">HiTech #1</button>
+          <button class="don-option" data-value="hitech2">HiTech #2</button>
+        </div>
+      </div>
+
+      <!-- Выбор периода -->
+      <div class="don-modal__field">
+        <label class="don-modal__field-label">Выберите период</label>
+        <div class="don-modal__options" id="donPeriodOptions">
+          <button class="don-option" data-value="7" data-price-mult="0.3">7 дней</button>
+          <button class="don-option" data-value="30" data-price-mult="1">30 дней</button>
+          <button class="don-option don-option--active" data-value="90" data-price-mult="2.5">90 дней</button>
+          <button class="don-option" data-value="365" data-price-mult="8">1 год</button>
+        </div>
+      </div>
+
+      <!-- Итог -->
+      <div class="don-modal__total">
+        <div class="don-modal__total-label">Итого к оплате</div>
+        <div class="don-modal__total-price" id="donTotalPrice">0 ₽</div>
+      </div>
+    </div>
+
+    <div class="don-modal__footer">
+      <button class="don-modal__cancel" id="donModalCancel">Отмена</button>
+      <button class="don-modal__confirm" id="donModalConfirm">Перейти к оплате</button>
+    </div>
+  </div>
+</div>
+
+<script src="../api/donate.js"></script>
 </body>
 </html>
