@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OldCraft — Донат</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="banner-bg"></div>
+  <div class="banner-glow"></div>
+  <div class="banner-content">
+    <a href="../api/authorization.html" class="btn btn-login">Вход</a>
+    <a href="../api/register.html" class="btn btn-register">Регистрация</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-bottom-glow"></div>
+  <div class="nav-inner">
+    <a class="logo-section" href="../index.php">
+      <div class="logo-hexes">
+        <svg class="hex-big" width="28" height="28" viewBox="0 0 60 52">
+          <polygon points="30,2 56,16 56,36 30,50 4,36 4,16" fill="none" stroke="#00c8f8" stroke-width="2"/>
+        </svg>
+        <svg class="hex-small" width="18" height="18" viewBox="0 0 60 52">
+          <polygon points="30,2 56,16 56,36 30,50 4,36 4,16" fill="rgba(0,200,248,0.15)" stroke="#00c8f8" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <div>
+        <span class="logo-text">OldCraft</span>
+        <span class="logo-sub">Gaming Network</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="/index.php">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Главная
+      </a>
+      <a class="nav-link" href="../api/servers.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Наши сервера
+      </a>
+      <a class="nav-link" href="#">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Помощь
+      </a>
+      <a class="nav-link active" href="#">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="10"/></svg>
+        Донат
+      </a>
+      <a class="nav-link" href="#">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        Форум
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- DONATE PAGE -->
+<div class="don-page">
+  <div class="don-inner">
+
+    <div class="don-header">
+      <div class="don-header__icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div>
+        <span class="don-header__label">// Магазин привилегий</span>
+        <div class="don-header__title">Донат</div>
+      </div>
+    </div>
+    <div class="don-subtitle">Поддержи проект и получи уникальные привилегии на всех серверах</div>
+
+    <div class="don-grid">
+
+      <!-- VIP -->
+      <div class="don-card don-card--vip">
+        <div class="don-card__scan"></div>
+        <div class="don-card__glow"></div>
+        <div class="don-card__topline"></div>
+        <div class="don-card__body">
+          <div class="don-card__icon-wrap">⭐</div>
+          <div class="don-card__rank">VIP</div>
+          <div class="don-card__desc">Базовая привилегия для тех кто хочет немного больше возможностей на сервере.</div>
+          <ul class="don-perks">
+            <li>Префикс [VIP] в чате</li>
+            <li>Цветной ник</li>
+            <li>+2 дома (/sethome)</li>
+            <li>Приоритет входа на сервер</li>
+            <li>Доступ к /fly в лобби</li>
+          </ul>
+          <div class="don-card__divider"></div>
+          <div class="don-card__footer">
+            <div class="don-price">
+              <span class="don-price__label">Стоимость</span>
+              <span class="don-price__value">99 ₽</span>
+              <span class="don-price__period">навсегда</span>
+            </div>
+            <button class="don-buy-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium -->
+      <div class="don-card don-card--premium">
+        <div class="don-card__scan"></div>
+        <div class="don-card__glow"></div>
+        <div class="don-card__topline"></div>
+        <div class="don-card__badge" style="color:#ce93d8; border-color:#ce93d8;">Популярный</div>
+        <div class="don-card__body">
+          <div class="don-card__icon-wrap">💎</div>
+          <div class="don-card__rank">Premium</div>
+          <div class="don-card__desc">Расширенный набор привилегий для опытных игроков. Включает все возможности VIP.</div>
+          <ul class="don-perks">
+            <li>Всё из VIP</li>
+            <li>Префикс [Premium] в чате</li>
+            <li>+5 домов (/sethome)</li>
+            <li>Доступ к /nick</li>
+            <li>Уникальные частицы</li>
+            <li>Доступ к закрытым ивентам</li>
+          </ul>
+          <div class="don-card__divider"></div>
+          <div class="don-card__footer">
+            <div class="don-price">
+              <span class="don-price__label">Стоимость</span>
+              <span class="don-price__value">249 ₽</span>
+              <span class="don-price__period">навсегда</span>
+            </div>
+            <button class="don-buy-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Helper -->
+      <div class="don-card don-card--helper">
+        <div class="don-card__scan"></div>
+        <div class="don-card__glow"></div>
+        <div class="don-card__topline"></div>
+        <div class="don-card__body">
+          <div class="don-card__icon-wrap">🤝</div>
+          <div class="don-card__rank">Helper</div>
+          <div class="don-card__desc">Помощник сервера. Помогаешь игрокам и следишь за порядком в чате.</div>
+          <ul class="don-perks">
+            <li>Префикс [Helper] в чате</li>
+            <li>Доступ к /mute /kick</li>
+            <li>Видимость в списке команды</li>
+            <li>Доступ к каналу команды</li>
+            <li>+3 дома (/sethome)</li>
+          </ul>
+          <div class="don-card__divider"></div>
+          <div class="don-card__footer">
+            <div class="don-price">
+              <span class="don-price__label">Стоимость</span>
+              <span class="don-price__value">199 ₽</span>
+              <span class="don-price__period">навсегда</span>
+            </div>
+            <button class="don-buy-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Moderator -->
+      <div class="don-card don-card--moderator">
+        <div class="don-card__scan"></div>
+        <div class="don-card__glow"></div>
+        <div class="don-card__topline"></div>
+        <div class="don-card__body">
+          <div class="don-card__icon-wrap">🛡️</div>
+          <div class="don-card__rank">Moderator</div>
+          <div class="don-card__desc">Расширенные права модерации. Следишь за порядком и помогаешь администрации.</div>
+          <ul class="don-perks">
+            <li>Всё из Helper</li>
+            <li>Префикс [Moder] в чате</li>
+            <li>Доступ к /ban /tempban</li>
+            <li>Доступ к /vanish</li>
+            <li>Просмотр логов чата</li>
+            <li>+5 домов (/sethome)</li>
+          </ul>
+          <div class="don-card__divider"></div>
+          <div class="don-card__footer">
+            <div class="don-price">
+              <span class="don-price__label">Стоимость</span>
+              <span class="don-price__value">399 ₽</span>
+              <span class="don-price__period">навсегда</span>
+            </div>
+            <button class="don-buy-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sponsor -->
+      <div class="don-card don-card--sponsor">
+        <div class="don-card__scan"></div>
+        <div class="don-card__glow"></div>
+        <div class="don-card__topline"></div>
+        <div class="don-card__badge" style="color:#ff5722; border-color:#ff5722;">Особый</div>
+        <div class="don-card__body">
+          <div class="don-card__icon-wrap">🔥</div>
+          <div class="don-card__rank">Sponsor</div>
+          <div class="don-card__desc">Спонсор проекта. Особый статус для тех кто вносит значительный вклад в развитие сервера.</div>
+          <ul class="don-perks">
+            <li>Всё из Premium</li>
+            <li>Префикс [Sponsor] в чате</li>
+            <li>Уникальный плащ</li>
+            <li>Имя в титрах сервера</li>
+            <li>Личная комната на сервере</li>
+            <li>Доступ к закрытому Discord каналу</li>
+          </ul>
+          <div class="don-card__divider"></div>
+          <div class="don-card__footer">
+            <div class="don-price">
+              <span class="don-price__label">Стоимость</span>
+              <span class="don-price__value">799 ₽</span>
+              <span class="don-price__period">навсегда</span>
+            </div>
+            <button class="don-buy-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin -->
+      <div class="don-card don-card--admin">
+        <div class="don-card__scan"></div>
+        <div class="don-card__glow"></div>
+        <div class="don-card__topline"></div>
+        <div class="don-card__badge" style="color:#f44336; border-color:#f44336;">Элита</div>
+        <div class="don-card__body">
+          <div class="don-card__icon-wrap">👑</div>
+          <div class="don-card__rank">Admin</div>
+          <div class="don-card__desc">Высший статус на сервере. Полный доступ к инструментам управления и уникальные привилегии.</div>
+          <ul class="don-perks">
+            <li>Всё из Moderator</li>
+            <li>Префикс [Admin] в чате</li>
+            <li>Полный доступ к командам</li>
+            <li>Управление серверами</li>
+            <li>Неограниченные дома</li>
+            <li>Личная встреча с командой</li>
+          </ul>
+          <div class="don-card__divider"></div>
+          <div class="don-card__footer">
+            <div class="don-price">
+              <span class="don-price__label">Стоимость</span>
+              <span class="don-price__value">1499 ₽</span>
+              <span class="don-price__period">навсегда</span>
+            </div>
+            <button class="don-buy-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="don-notice">
+      <span class="don-notice__icon">ℹ</span>
+      <span class="don-notice__text">
+                Привилегии выдаются автоматически после оплаты в течение нескольких минут. При возникновении проблем обратитесь в <a href="#">поддержку</a>. Продавая привилегии, мы не продаём игровые преимущества — только косметику и удобства.
+            </span>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
