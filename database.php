@@ -1,12 +1,14 @@
 <?php
-$host = 'db'; // Имя из docker-compose.yml
-$db   = 'my_app'; // Из переменной MYSQL_DATABASE
+$host = 'db';
+$db   = 'my_app';
 $user = 'root';
 $pass = 'root';
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-    echo "БД подключена успешно!";
+    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo "Ошибка: " . $e->getMessage();
+    http_response_code(500);
+    echo json_encode(['error' => $e->getMessage()]);
+    exit;
 }
